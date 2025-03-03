@@ -5,102 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glamping Loveland - The Future of Outdoor Living</title>
     <style>
+        /* Stile generale */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
+
+        /* Header con immagine di background */
         header {
             background: url('https://source.unsplash.com/1600x900/?camping,nature') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 60px 20px;
+            text-align: center;
+            padding: 20px;
         }
+
         header h1 {
-            font-size: 3em;
-            margin: 0;
+            font-size: 3.5em;
+            margin: 10px 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
+
+        header p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            background-color: #ff8c00;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta:hover {
+            background-color: #e07b00;
+            transform: scale(1.05);
+        }
+
+        /* Sezione contenuti */
         .content {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 50px auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
+
         h2 {
             color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
         }
-        .cta {
-            background-color: #3498db;
-            color: white;
-            padding: 15px 30px;
-            font-size: 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .cta:hover {
-            background-color: #2980b9;
-        }
+
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px;
         }
+
         .feature-box {
             width: 30%;
             background: #fff;
-            padding: 15px;
+            padding: 20px;
             margin: 10px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
         }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+        }
+
         footer {
             background: #2c3e50;
             color: white;
+            text-align: center;
             padding: 20px;
             margin-top: 30px;
         }
+
+        /* Form di contatto */
+        .contact-form {
+            background: #e3e3e3;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #2980b9;
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Glamping Loveland</h1>
-    <p>Where Nature Meets Future Technology</p>
+    <h1>Glamping Loveland</h1>
+    <p>Experience the future of outdoor living, where nature meets technology.</p>
     <button class="cta" onclick="alert('Crowdfunding coming soon!')">Support Our Project</button>
 </header>
 
 <div class="content">
-    <h2>About Our Vision</h2>
-    <p>Glamping Loveland is not just an outdoor experience; it’s a **glimpse into the future** where **AI, automation, and eco-friendly living** coexist with nature.</p>
-    
-    <h2>What Makes Us Unique?</h2>
+    <h2>Our Vision</h2>
+    <p>Glamping Loveland is a unique retreat combining **eco-friendly technology** with **luxurious outdoor experiences**.</p>
+
+    <h2>What We Offer</h2>
     <div class="features">
         <div class="feature-box">
             <h3>🏕️ Geodesic Domes</h3>
-            <p>Stay in futuristic, high-tech tents with **solar power, smart lighting, and automated climate control**.</p>
+            <p>Futuristic smart tents with **solar power, automated climate control, and immersive lighting.**</p>
         </div>
         <div class="feature-box">
-            <h3>🔭 Stargazing Experience</h3>
-            <p>Enjoy the beauty of the cosmos with **professional telescopes and guided astronomy nights**.</p>
+            <h3>🔭 Stargazing Events</h3>
+            <p>Enjoy **telescopes and guided astronomy nights** in collaboration with local observatories.</p>
         </div>
         <div class="feature-box">
             <h3>🚲 Outdoor Adventures</h3>
-            <p>Explore **biking and hiking trails** with guided tours and equipment rentals.</p>
+            <p>Explore **hiking and biking trails** with guided tours and equipment rentals.</p>
         </div>
     </div>
 
-    <h2>Our Location</h2>
-    <p>We have identified a **1.2-acre site near Carter Lake Reservoir, Loveland CO**, perfect for our **5 glamping domes, 10 RV spaces, and tent sites**.</p>
-    
-    <h2>Join Our Mission</h2>
-    <p>We are launching a **crowdfunding campaign** to bring this dream to life! **Help us build the future of eco-tech glamping.**</p>
+    <h2>📍 Location</h2>
+    <p>We have identified a **1.2-acre property near Carter Lake Reservoir, Loveland CO**, ideal for **5 high-tech domes, 10 RV spaces, and tent sites**.</p>
+
+    <h2>💡 Join Our Mission</h2>
+    <p>We are launching a **crowdfunding campaign** to turn this vision into reality. **Be part of the future of sustainable glamping!**</p>
     <button class="cta" onclick="alert('Support us on Kickstarter soon!')">Join the Movement</button>
+
+    <!-- Modulo di contatto -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 </div>
 
 <footer>
