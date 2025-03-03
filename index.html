@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         /* Header con immagine di background */
@@ -57,6 +58,27 @@
             transform: scale(1.05);
         }
 
+        /* Stile della navigazione */
+        nav {
+            background: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         /* Sezione contenuti */
         .content {
             max-width: 900px;
@@ -74,28 +96,16 @@
             margin-bottom: 10px;
         }
 
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
+        /* Sezione aggiornamenti */
+        .update-box {
+            background: #eef9ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #3498db;
+            text-align: left;
         }
 
-        .feature-box {
-            width: 30%;
-            background: #fff;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-box:hover {
-            transform: scale(1.05);
-        }
-
+        /* Footer */
         footer {
             background: #2c3e50;
             color: white;
@@ -104,88 +114,68 @@
             margin-top: 30px;
         }
 
-        /* Form di contatto */
-        .contact-form {
-            background: #e3e3e3;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .contact-form button {
-            background-color: #3498db;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #2980b9;
-        }
-
     </style>
 </head>
 <body>
 
+<!-- Navigazione -->
+<nav>
+    <a href="#about">Chi siamo</a>
+    <a href="#updates">Aggiornamenti</a>
+    <a href="#contact">Contatti</a>
+</nav>
+
+<!-- Header -->
 <header>
     <h1>Glamping Loveland</h1>
     <p>Experience the future of outdoor living, where nature meets technology.</p>
     <button class="cta" onclick="alert('Crowdfunding coming soon!')">Support Our Project</button>
 </header>
 
-<div class="content">
-    <h2>Our Vision</h2>
-    <p>Glamping Loveland is a unique retreat combining **eco-friendly technology** with **luxurious outdoor experiences**.</p>
-
-    <h2>What We Offer</h2>
-    <div class="features">
-        <div class="feature-box">
-            <h3>🏕️ Geodesic Domes</h3>
-            <p>Futuristic smart tents with **solar power, automated climate control, and immersive lighting.**</p>
-        </div>
-        <div class="feature-box">
-            <h3>🔭 Stargazing Events</h3>
-            <p>Enjoy **telescopes and guided astronomy nights** in collaboration with local observatories.</p>
-        </div>
-        <div class="feature-box">
-            <h3>🚲 Outdoor Adventures</h3>
-            <p>Explore **hiking and biking trails** with guided tours and equipment rentals.</p>
-        </div>
-    </div>
-
-    <h2>📍 Location</h2>
-    <p>We have identified a **1.2-acre property near Carter Lake Reservoir, Loveland CO**, ideal for **5 high-tech domes, 10 RV spaces, and tent sites**.</p>
-
-    <h2>💡 Join Our Mission</h2>
-    <p>We are launching a **crowdfunding campaign** to turn this vision into reality. **Be part of the future of sustainable glamping!**</p>
-    <button class="cta" onclick="alert('Support us on Kickstarter soon!')">Join the Movement</button>
-
-    <!-- Modulo di contatto -->
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <p>Have questions? Get in touch!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+<!-- Sezione CHI SIAMO -->
+<div class="content" id="about">
+    <h2>Chi siamo</h2>
+    <p>Glamping Loveland nasce dall’idea di creare una **fusione perfetta tra natura, tecnologia e futuro**.</p>
+    <p>Siamo in fase di progettazione per realizzare un **eco-glamping innovativo in Colorado**.</p>
+    <p>Abbiamo già completato diversi step: <br>
+       ✅ **Studio di fattibilità** <br>
+       ✅ **Identificazione del terreno (1.2 acri vicino Carter Lake, Loveland CO)** <br>
+       ✅ **Budget iniziale stimato: $500.000** <br>
+       ✅ **Ricerca consulenti esperti (Campground Consulting Group)** <br>
+       ✅ **Avvio preparazione crowdfunding su Kickstarter e Indiegogo**</p>
 </div>
 
+<!-- Sezione AGGIORNAMENTI -->
+<div class="content" id="updates">
+    <h2>Aggiornamenti</h2>
+    <div class="update-box">
+        <strong>📅 3 Marzo 2025</strong>
+        <p>✅ **Inviata richiesta di consulenza a Campground Consulting Group.**</p>
+    </div>
+    <div class="update-box">
+        <strong>📅 2 Marzo 2025</strong>
+        <p>✅ **Pubblicata la prima versione della Landing Page.**</p>
+    </div>
+    <div class="update-box">
+        <strong>📅 25 Febbraio 2025</strong>
+        <p>✅ **Trovato terreno in vendita vicino Carter Lake Reservoir, Colorado.**</p>
+    </div>
+    <p><i>(La sezione aggiornamenti verrà aggiornata man mano che il progetto procede.)</i></p>
+</div>
+
+<!-- Sezione CONTATTI -->
+<div class="content contact-form" id="contact">
+    <h2>Contattaci</h2>
+    <p>Vuoi saperne di più o collaborare con noi? Scrivici!</p>
+    <form>
+        <input type="text" placeholder="Il tuo nome" required>
+        <input type="email" placeholder="La tua email" required>
+        <textarea placeholder="Il tuo messaggio" rows="4" required></textarea>
+        <button type="submit">Invia messaggio</button>
+    </form>
+</div>
+
+<!-- Footer -->
 <footer>
     <p>© 2025 Glamping Loveland. All rights reserved.</p>
 </footer>
