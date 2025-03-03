@@ -6,6 +6,21 @@
     <title>Glamping Loveland - The Future of Outdoor Living</title>
     <style>
         /* General Styles */
+        <script>
+    let carousel = document.querySelector('.carousel');
+    let images = document.querySelectorAll('.carousel img');
+    let index = 0;
+
+    function slide() {
+        index++;
+        if (index >= images.length) {
+            index = 0;
+        }
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    setInterval(slide, 3000); // Cambia immagine ogni 3 secondi
+</script>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -203,7 +218,37 @@
 .tech-item p {
     font-size: 1em;
 }
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    max-height: 500px;
+}
 
+/* Carousel Animation */
+.carousel {
+    display: flex;
+    width: 400%;
+    animation: scroll 12s infinite linear;
+}
+
+.carousel img {
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes scroll {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
     </style>
 </head>
 <body>
