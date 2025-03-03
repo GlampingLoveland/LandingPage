@@ -3,41 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Glamping in Loveland</title>
+    <title>Glamping Loveland - The Future of Outdoor Living</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f8f9fa;
-            padding: 20px;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
+        header {
+            background: url('https://source.unsplash.com/1600x900/?camping,nature') no-repeat center center/cover;
+            color: white;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .content {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
             color: #2c3e50;
         }
-        p {
-            font-size: 18px;
-            color: #34495e;
-        }
         .cta {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 20px;
             background-color: #3498db;
             color: white;
+            padding: 15px 30px;
+            font-size: 20px;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: 0.3s;
         }
         .cta:hover {
             background-color: #2980b9;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .feature-box {
+            width: 30%;
+            background: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
+<header>
     <h1>Welcome to Glamping Loveland</h1>
-    <p>Experience the perfect blend of nature and technology in our futuristic glamping site.</p>
-    
+    <p>Where Nature Meets Future Technology</p>
     <button class="cta" onclick="alert('Crowdfunding coming soon!')">Support Our Project</button>
+</header>
+
+<div class="content">
+    <h2>About Our Vision</h2>
+    <p>Glamping Loveland is not just an outdoor experience; it’s a **glimpse into the future** where **AI, automation, and eco-friendly living** coexist with nature.</p>
+    
+    <h2>What Makes Us Unique?</h2>
+    <div class="features">
+        <div class="feature-box">
+            <h3>🏕️ Geodesic Domes</h3>
+            <p>Stay in futuristic, high-tech tents with **solar power, smart lighting, and automated climate control**.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🔭 Stargazing Experience</h3>
+            <p>Enjoy the beauty of the cosmos with **professional telescopes and guided astronomy nights**.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🚲 Outdoor Adventures</h3>
+            <p>Explore **biking and hiking trails** with guided tours and equipment rentals.</p>
+        </div>
+    </div>
+
+    <h2>Our Location</h2>
+    <p>We have identified a **1.2-acre site near Carter Lake Reservoir, Loveland CO**, perfect for our **5 glamping domes, 10 RV spaces, and tent sites**.</p>
+    
+    <h2>Join Our Mission</h2>
+    <p>We are launching a **crowdfunding campaign** to bring this dream to life! **Help us build the future of eco-tech glamping.**</p>
+    <button class="cta" onclick="alert('Support us on Kickstarter soon!')">Join the Movement</button>
+</div>
+
+<footer>
+    <p>© 2025 Glamping Loveland. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
