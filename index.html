@@ -7,20 +7,38 @@
     <style>
         /* General Styles */
         <script>
+    
+</script>
+        <script>
     let carousel = document.querySelector('.carousel');
     let images = document.querySelectorAll('.carousel img');
     let index = 0;
 
-    function slide() {
+    function updateCarousel() {
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    function nextSlide() {
         index++;
         if (index >= images.length) {
             index = 0;
         }
-        carousel.style.transform = `translateX(${-index * 100}%)`;
+        updateCarousel();
     }
 
-    setInterval(slide, 3000); // Cambia immagine ogni 3 secondi
+    function prevSlide() {
+        index--;
+        if (index < 0) {
+            index = images.length - 1;
+        }
+        updateCarousel();
+    }
+
+    setInterval(nextSlide, 5000); // Cambia immagine ogni 5 secondi automaticamente
 </script>
+</body>
+</html>
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -33,14 +51,14 @@
         /* Header with background image */
         header {
             background: url('https://source.unsplash.com/1600x900/?camping,nature') no-repeat center center/cover;
-            height: 100vh;
+            height: 400vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             color: black;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
         }
 
         header h1 {
@@ -222,7 +240,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 20px auto;
+    margin: 5px auto;
     max-height: 500px;
 }
 
