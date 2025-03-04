@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Glamping Loveland</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ADFF2F;
+            text-align: center;
+        }
+
+        nav {
+            background: #228B22;
+            padding: 15px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #228B22;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="content">
+    <h2>About Us</h2>
+    <p>Glamping Loveland was born from the idea of merging nature, technology, and the future.</p>
+</div>
+
+<footer>
+    <p>© 2025 Glamping Loveland. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
