@@ -77,6 +77,43 @@
             border: 2px solid white;
         }
 
+        /* Carousel */
+        .carousel-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
         /* Visitor Counter */
         .visitor-counter {
             text-align: center;
@@ -116,10 +153,6 @@
             margin-top: 10px;
         }
 
-        .newsletter-form button:hover {
-            background-color: #e07b00;
-        }
-
         /* Updates Section */
         .updates-container {
             display: flex;
@@ -136,17 +169,38 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .update-box:hover {
-            transform: scale(1.02);
+        /* Contact Form */
+        .contact-form {
+            text-align: left;
+            padding: 30px;
+            border-radius: 10px;
+            background: #1c6b1c;
         }
 
-        /* Footer */
-        footer {
-            background: #228B22;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 1em;
+            background: white;
+            color: black;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            background-color: #ff8c00;
+            color: black;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -166,22 +220,19 @@
     <button class="cta" onclick="alert('Crowdfunding coming soon!')">Support Our Project</button>
 </header>
 
-<!-- Visitor Counter -->
-<div class="content visitor-counter">
-    <h2>Visitors</h2>
-    <p>You're visitor number:</p>
-    <div id="counter-container">
-        <div id="sfcz15pta7dbm62tdyq7ezmh2w95szh9fh3"></div>
-        <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=z15pta7dbm62tdyq7ezmh2w95szh9fh3&down=async" async></script>
-        <noscript>
-            <a href="https://www.contatoreaccessi.com">
-                <img src="https://counter6.optistats.ovh/private/contatoreaccessi.php?c=z15pta7dbm62tdyq7ezmh2w95szh9fh3" 
-                border="0"
-                alt="counter">
-            </a>
-        </noscript>
+<!-- Carousel -->
+<div class="carousel-container">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel">
+        <img src="render01.webp" class="active">
+        <img src="render02.webp">
+        <img src="render03.webp">
+        <img src="render04.webp">
     </div>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
 </div>
+
+
 
 <!-- Newsletter Signup -->
 <div class="content newsletter-form">
@@ -200,29 +251,33 @@
     <div class="updates-container">
         <div class="update-box">
             <strong>📅 March 6, 2025</strong>
-            <p>✅ Completed and published the full <strong>About Us</strong> section, sharing our vision, family story, and innovative approach.</p>
-        </div>
-
-        <div class="update-box">
-            <strong>📅 March 5, 2025</strong>
-            <p>✅ Successfully launched official social media pages on <strong>Instagram and X (Twitter)</strong>.</p>
-        </div>
-
-        <div class="update-box">
-            <strong>📅 March 4, 2025</strong>
-            <p>✅ Finalized and optimized the <strong>Landing Page design</strong> for a seamless experience.</p>
-        </div>
-
-        <div class="update-box">
-            <strong>📅 March 3, 2025</strong>
-            <p>✅ <strong>Contacted Campground Consulting Group</strong> for a professional consultation.</p>
+            <p>✅ Published full <strong>About Us</strong> section.</p>
         </div>
     </div>
 </div>
 
+<!-- CONTACT Section -->
+<div class="content contact-form" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xpwpaqrv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+    <!-- Visitor Counter -->
+<div class="content visitor-counter">
+    <h2>Visitors</h2>
+    <p>You're visitor number:</p>
+    <div id="counter-container">
+        <div id="sfcz15pta7dbm62tdyq7ezmh2w95szh9fh3"></div>
+    </div>
+</div>
 <!-- Footer -->
 <footer>
-    <p>© 2025 Glamping Loveland. All rights reserved.</p>
+    <p>© 2025 Glamping Loveland.</p>
 </footer>
 
 </body>
