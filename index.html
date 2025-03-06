@@ -11,7 +11,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #228B22; /* Verde scuro uniforme */
+            background-color: #228B22;
             color: white;
             scroll-behavior: smooth;
         }
@@ -66,17 +66,6 @@
             text-decoration: underline;
         }
 
-        /* Content */
-        .content {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #228B22; /* Sfondo verde scuro uniforme */
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid white;
-        }
-
         /* Carousel */
         .carousel-container {
             width: 100%;
@@ -114,38 +103,14 @@
         .prev { left: 10px; }
         .next { right: 10px; }
 
-
-        /* Newsletter Form */
-        .newsletter-form {
-            background: #1c6b1c;
-            padding: 20px;
-            border-radius: 10px;
+        /* Visitor Counter */
+        .visitor-counter {
             text-align: center;
-            margin-top: 20px;
-        }
-
-        .newsletter-form h2 {
-            color: white;
-        }
-
-        .newsletter-form input[type="email"] {
-            width: 80%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
-
-        .newsletter-form button {
-            background-color: #ff8c00;
-            color: black;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
+            padding: 20px;
+            background: #1c6b1c;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 10px;
         }
 
         /* Updates Section */
@@ -227,19 +192,24 @@
     <button class="next" onclick="nextSlide()">&#10095;</button>
 </div>
 
-
-
-<!-- Newsletter Signup -->
-<div class="content newsletter-form">
-    <h2>Stay Updated!</h2>
-    <p>Sign up to get notified about the crowdfunding launch.</p>
-    <form action="https://formspree.io/f/xpwpaqrv" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
+<!-- Visitor Counter -->
+<div class="content visitor-counter">
+    <h2>Visitors</h2>
+    <p>You're visitor number:</p>
+    <div id="counter-container">
+        <div id="sfcz15pta7dbm62tdyq7ezmh2w95szh9fh3"></div>
+        <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=z15pta7dbm62tdyq7ezmh2w95szh9fh3&down=async" async></script>
+        <noscript>
+            <a href="https://www.contatoreaccessi.com" title="contatore dati scaricati internet">
+                <img src="https://counter6.optistats.ovh/private/contatoreaccessi.php?c=z15pta7dbm62tdyq7ezmh2w95szh9fh3" 
+                border="0"
+                title="contatore dati scaricati internet"
+                alt="contatore dati scaricati internet">
+            </a>
+        </noscript>
+    </div>
 </div>
-
-<!-- LATEST UPDATES Section -->
+    <!-- LATEST UPDATES Section -->
 <div class="content" id="updates">
     <h2>Latest Updates</h2>
     
@@ -307,11 +277,36 @@
     </form>
 </div>
 
-    
 <!-- Footer -->
 <footer>
     <p>© 2025 Glamping Loveland.</p>
 </footer>
+
+<script>
+    let images = document.querySelectorAll('.carousel img');
+    let index = 0;
+
+    function updateCarousel() {
+        images.forEach((img, i) => {
+            img.classList.remove('active');
+            if (i === index) {
+                img.classList.add('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        index = (index + 1) % images.length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        index = (index - 1 + images.length) % images.length;
+        updateCarousel();
+    }
+
+    setInterval(nextSlide, 5000);
+</script>
 
 </body>
 </html>
