@@ -276,18 +276,19 @@
     </div>
 </div>
 
-<!-- Contact -->
+<!-- CONTACT Section -->
 <div class="content contact-form" id="contact">
     <h2>Contact Us</h2>
-    <form>
+    <p>Want to know more or collaborate with us? Get in touch!</p>
+    <form action="https://formspree.io/f/XXXXXX" method="POST">
         <label for="name">Your Name</label>
-        <input type="text" id="name" required>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
         <label for="email">Your Email</label>
-        <input type="email" id="email" required>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
 
         <label for="message">Your Message</label>
-        <textarea id="message" required></textarea>
+        <textarea name="message" id="message" placeholder="Write your message here" rows="5" required></textarea>
 
         <button type="submit">Send Message</button>
     </form>
